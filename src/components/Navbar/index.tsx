@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/logo.jpg"
+import logo from "../../../public/logo.png"
 import NavItem, { NavItemInterface } from "../NavItem";
 import "./index.css"
 import { usePathname } from "next/navigation";
@@ -39,8 +39,8 @@ export default function Navbar (){
     return (
         <header>
             <nav className="navbar">
-                <Link href="/">
-                    <Image src={logo} width={100} height={100} alt="logo" className="logo"/>
+                <Link href="/" className="logo">
+                    <Image src={logo} width={0} height={0} alt="logo" />
                 </Link>
 
                 <ul className={`nav-items ${openMenu ? 'open' : '' }` } >
