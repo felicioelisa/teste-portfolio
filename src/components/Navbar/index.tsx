@@ -25,22 +25,22 @@ export default function Navbar (){
         },
         {
             url: "/graduation",
-            label: "Formacao"
+            label: "Formação"
         },
         {
             url: "/jobs",
-            label: "Experiencias"
+            label: "Experiências"
         }
     ]
 
     const pathname = usePathname();
-    const [openMenu, setOpenMenu] = useState<boolean> (false);
+    const [openMenu, setOpenMenu] = useState <boolean> (false);
 
     return (
         <header>
             <nav className="navbar">
                 <Link href="/" className="logo">
-                    <Image src={logo} width={0} height={0} alt="logo" />
+                { !openMenu ? <Image src={logo} width={0} height={0} alt="logo" /> : '' }
                 </Link>
 
                 <ul className={`nav-items ${openMenu ? 'open' : '' }` } >
@@ -54,11 +54,11 @@ export default function Navbar (){
                     ))}
                 </ul>
 
-                <button className="btn-bar-mobile" onClick={ () => setOpenMenu(!openMenu) } >
+                <button className={`btn-bar-mobile ${openMenu ? 'open-btn-mobile' : '' }` } onClick={ () => setOpenMenu(!openMenu) } >
                     { openMenu ? <FaXmark /> : <FaBars />}
                 </button>
 
-                <button className="btn-default">
+                <button className={`btn-default ${openMenu ? 'close-btn-default' : '' }` }>
                     Contatar
                 </button>
             </nav>

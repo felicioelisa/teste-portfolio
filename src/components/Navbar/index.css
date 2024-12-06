@@ -2,6 +2,7 @@ header {
     .navbar {
         display: flex;
         justify-items: left;
+        justify-content: space-between;
         align-items: center;
         padding: 0 2% 0 0;
         background-color: #C6E2CD;
@@ -9,10 +10,13 @@ header {
 
         .logo {
             img {
-                max-width:350px;
-                height: auto;
-                max-height: 150px;
-                object-fit: cover;
+                width: 100%;
+                min-height: auto;
+                max-height:150px;
+            }
+
+            &.close-logo {
+                display: none;
             }
         }
 
@@ -43,10 +47,14 @@ header {
             font-family: inherit;
             font-weight: 500;
             transition: all 0.3s;
-
+            margin-left: 2%;
 
             &:hover {
                 background-color: #404b75;
+            }
+
+            &.close-btn-default {
+                display: none;
             }
         }
 
@@ -57,11 +65,16 @@ header {
             color: dimgrey;
             border: none;
             cursor: pointer;
+            position: relative;
+
+            &.open-btn-mobile {
+                display: flex;
+            }
         }
 
         @media screen and (max-width: 768px) {
             .btn-bar-mobile {
-                display: block;
+                display: flex;
             }
 
             .nav-items {
