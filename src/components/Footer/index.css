@@ -1,3 +1,9 @@
 .footer-item {
-    background-color: #739D7B;
+    background-color: #344034;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: aliceblue;
+    text-align: center;
+    font-size: 0.7em;
 }

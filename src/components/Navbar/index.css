@@ -11,7 +11,6 @@ header {
         .logo {
             img {
                 width: 100%;
-                min-height: auto;
                 max-height:150px;
             }
 
@@ -22,14 +21,14 @@ header {
 
         .nav-items {
             display: flex;
-            gap: 32px;
+            gap: 30px;
             list-style: none;
             align-items: center;
 
             &.open {
                 flex-direction: column;
-                position: absolute;
-                top: 60px;
+                position: relative;
+                top: 0;
                 left: 0;
                 width: 100%;
                 background-color: #C6E2CD;    
