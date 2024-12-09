@@ -1,0 +1,15 @@
+main{
+    img {
+        width: 50%;
+    }
+
+    .work-cards {
+        color: aliceblue;
+        width: 50%;
+        height: 50%;
+        border-radius: 26px;
+        text-align: right;
+        background-color: darkgrey;
+    }
+}
+
